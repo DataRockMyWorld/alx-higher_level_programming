@@ -9,26 +9,26 @@
  */
 int check_cycle(listint_t *list)
 {
-        listint_t *temp = NULL;
+	listint_t *temp = NULL;
 
-        if (list == NULL)
-        {
-                return (NULL);
-        }
+	if (list == NULL)
+	{
+		return (0);
+	}
 
-        temp = list;
+	temp = list;
 
-        while (temp->next != NULL)
-        {
-                if (temp->next == list)
-                {
-                        return (1);
-                }
-                else
-                {
-                        temp = temp->next;
-                }
+	while (temp->next != NULL)
+	{
+		if (temp->next == list)
+		{
+			return (1);
+		}
+		else
+		{
+			temp = temp->next;
+		}
 
-        }
-        return (0);
+	}
+	return (0);
 }
