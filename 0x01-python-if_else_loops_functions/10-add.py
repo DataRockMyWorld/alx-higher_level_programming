@@ -2,5 +2,5 @@
 def add(a, b):
     a = int(a)
     b = int(b)
-    c = a + b
-    return c
+
+    return a + b
