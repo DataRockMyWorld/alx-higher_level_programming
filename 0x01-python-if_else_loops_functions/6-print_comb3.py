@@ -9,4 +9,4 @@ while i < 9:
             print("{}{}".format(i, j))
         j = j + 1
     i = i + 1
-print()
+
