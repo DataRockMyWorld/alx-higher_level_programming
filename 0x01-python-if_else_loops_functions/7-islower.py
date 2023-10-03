@@ -1,5 +1,8 @@
 #!/usr/bin/python3
 def islower(c):
-    if ord(c) == ord(c.lower()):
+    if c.isnumeric():
+        return False
+    elif c == c.lower():
         return True
-    return False
+    else:
+        return False
