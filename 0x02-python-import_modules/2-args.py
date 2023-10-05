@@ -8,7 +8,7 @@ if __name__ == "__main__":
         print("1 argument:")
         print(f"1: {argv[1]}")
     elif len(argv) > 2:
-        print(f"{len(argv) - 1}: arguments:")
+        print(f"{len(argv) - 1} arguments:")
         i = 1
         while i < len(argv):
             print(f"{i}: {argv[i]}")
