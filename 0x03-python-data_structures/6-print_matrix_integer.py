@@ -7,10 +7,8 @@ def print_matrix_integer(matrix=[[]]):
         return
 
     for row in matrix:
-        i = 0
-        for element in row:
-            if i == 2:
+        for index, element in enumerate(row):
+            if index == len(row) - 1:
                 print("{:d}".format(element))
             else:
                 print("{:d}".format(element), end=" ")
-            i += 1
