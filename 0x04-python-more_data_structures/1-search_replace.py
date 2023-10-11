@@ -2,7 +2,6 @@
 
 
 def search_replace(my_list, search, replace):
-
     new = list(my_list)
     for indx, v in enumerate(new):
         if v == search:

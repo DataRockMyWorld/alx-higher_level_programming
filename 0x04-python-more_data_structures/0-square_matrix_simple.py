@@ -2,8 +2,6 @@
 
 
 def square_matrix_simple(matrix=[]):
-    if not matrix or matrix[0] == []:
-        return
     new = []
 
     for row in matrix:
