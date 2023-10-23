@@ -4,7 +4,8 @@
 def safe_function(fct, *args):
     try:
         result = fct(*args)
+        return result
     except Exception as e:
         print(f"Exception: {e}")
-        result = None
-    return result
+        return None
+    
