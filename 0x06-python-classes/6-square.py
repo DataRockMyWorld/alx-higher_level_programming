@@ -13,7 +13,7 @@ class Square:
         self.__position = position
 
     def __str__(self):
-        self.my_print()
+        return self.my_print()
 
     @property
     def size(self):
@@ -54,14 +54,10 @@ class Square:
         pos = ""
         if self.size == 0:
             return "\n"
-        for row in range(self.position[1]):
+        for _ in range(self.position[1]):
             pos += "\n"
         for _ in range(self.size):
-            for col in range(self.position[0]):
-                pos += " "
-            for _ in range(self.size):
-                pos += "#"
-            pos += "\n"
+            pos += " " * self.position[0] + "#" * self.size + "\n"
         return pos
 
     def my_print(self):
