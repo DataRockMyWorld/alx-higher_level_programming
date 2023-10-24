@@ -8,9 +8,7 @@ class Square:
     """
 
     def __init__(self, size=0):
-        """
-        Initializing the objects
-        """
+        """Initializing the objects"""
         if not isinstance(size, int):
             raise TypeError("size must be >= 0")
 
@@ -36,7 +34,13 @@ class Square:
         self.__size = value
 
     def area(self):
-        """
-        Calculate the area of the square
-        """
+        """Calculate the area of the square"""
         return self.__size * self.__size
+
+    def my_print(self):
+        """Prints the # character to standard output"""
+        if self.__size == 0:
+            print()
+        else:
+            for row, col in enumerate(range(self.__size)):
+                print(self.__size * "#")
