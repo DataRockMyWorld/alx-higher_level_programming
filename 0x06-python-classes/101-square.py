@@ -12,6 +12,10 @@ class Square:
         self.__size = size
         self.__position = position
 
+    def __str__(self):
+        """Printing class Generic"""
+        return self.pos_print()[:-1]
+
     @property
     def size(self):
         """Property to retrieve size"""
