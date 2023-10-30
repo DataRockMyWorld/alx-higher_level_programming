@@ -61,19 +61,20 @@ class Rectangle:
         P = 2 * (self.__height + self.__width)
         return P
 
-    def __str__(self):
-        """Print a rectangle of rectangles"""
+    def __str__(self) -> str:
+        """presents a diagram of the rectangle defined for an object"""
         if self.__width == 0 or self.__height == 0:
-            return ""
-        rec = ""
-        for i in range(self.__height):
-            try:
-                rec += self.__width * self.print_symbol
-            except Exception:
-                rec += type(self).print_symbol * self.__width
-            if i != self.__height - 1:
-                rec += "\n"
-        return rec
+            return ("")
+        rectangle = ""
+        for column in range(self.__height):
+            for row in range(self.__width):
+                try:
+                    rectangle += str(self.print_symbol)
+                except Exception:
+                    rectangle += type(self).print_symbol
+            if column < self.__height - 1:
+                rectangle += "\n"
+        return (rectangle)
 
     def __repr__(self):
         return "Rectangle({:d}, {:d})".format(self.__width, self.__height)
@@ -89,9 +90,7 @@ class Rectangle:
             raise TypeError("rect_1 must be an instance of Rectangle")
         if not isinstance(rect_2, Rectangle):
             raise TypeError("rect_2 must be an instance of Rectangle")
-        if rect_1 == rect_2:
-            return rect_1
-        if rect_1.area() > rect_2.area():
+        if rect_1.area() >= rect_2.area():
             return rect_1
         else:
             return rect_2
