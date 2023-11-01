@@ -1,0 +1,39 @@
+The "2-matrix_divided" module
+==========================
+
+using "matrix_divided" function
+-----------------------------
+
+
+First `` from the 2-matrix_divided module:
+
+>>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+
+Now use it to test case:
+
+Add an integer matrix and a divisor > 0
+----------------------------------------
+>>> matrix_divided([[2, 4, 6], [8, 12, 2]], 2)
+[[1.0, 2.0, 3.0], [4.0, 6.0, 1.0]]
+
+
+Add a Row with a length of 2
+-------------------------------
+>>> matrix_divided([[2, 4, 6], [8, 12]], 2)
+Traceback (most recent call last):
+    ...
+TypeError: Each row of the matrix must have the same size
+
+Add a Function with 3 Argument
+-------------------------------
+>>> matrix_divided([[2, 4, 6], [8, 12]], 2)
+Traceback (most recent call last):
+    ...
+TypeError: Each row of the matrix must have the same size
+
+Add a tuple as a row in the Matrix
+-------------------------------
+>>> matrix_divided([[2, 4, 6], (8, 5, 12)], 2)
+Traceback (most recent call last):
+    ...
+TypeError: Matrix must be a matrix(list of lists) of integers/floats

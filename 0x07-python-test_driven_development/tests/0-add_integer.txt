@@ -1,0 +1,73 @@
+The "0-add_integer" module
+==========================
+
+using "add_integer" function
+-----------------------------
+
+This is an add_integer text file in text format.
+First import add_integer from the 0-add_integer module:
+
+>>> add_integer = __import__('0-add_integer').add_integer
+
+Now use it to test case:
+
+Add two positive integers
+>>> add_integer(2, 3)
+5
+
+Add two Negative integers
+>>> add_integer(-3, -5)
+-8
+
+Add one positive, One Negative Integer
+>>> add_integer(2, -3)
+-1
+
+Add a string and an integer
+>>> add_integer("Hello", 3)
+Traceback (most recent call last):
+            ...
+TypeError: a must be an integer
+
+Add two Positive floats
+>>> add_integer(5.7, 3.8)
+8
+
+Add two Negative Floats
+>>> add_integer(-2.3, -7.2)
+-9
+
+Add One Float, One Integer
+>>> add_integer(3, 7.2)
+10
+
+Add One positive Float, One Negative Float
+>>> add_integer(3.6, -11.2)
+-8
+
+Add One Positive Integer
+>>> add_integer(2)
+100
+
+Add One Negative Integer
+>>> add_integer(-5)
+93
+
+Add No Argument
+>>> add_integer()
+Traceback (most recent call last):
+            ...
+TypeError: add_integer() missing 1 required positional argument: 'a'
+
+Add a list and an integer
+>>> add_integer([2, 4, 7], 3)
+Traceback (most recent call last):
+            ...
+TypeError: a must be an integer
+
+
+Add a list and an integer
+>>> add_integer(7, [2, 4, 7])
+Traceback (most recent call last):
+            ...
+TypeError: b must be an integer
