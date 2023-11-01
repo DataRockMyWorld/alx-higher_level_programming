@@ -1,0 +1,20 @@
+#!/usr/bin/python3
+"""Prints squares as #"""
+
+
+def print_square(size):
+    """
+    Prints squares as #
+
+    Takes an argument called size
+
+    """
+    if not isinstance(size, int):
+        raise TypeError("size must be an integer")
+    if size < 0:
+        raise ValueError("size must be >= 0")
+    if isinstance(size, float) and size < 0:
+        raise TypeError("size must be an integer")
+
+    for _, col in enumerate(range(size)):
+        print(size * "#")
