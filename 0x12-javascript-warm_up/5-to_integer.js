@@ -8,3 +8,4 @@ if (!isNaN(firstArgument)) {
 } else {
   console.log('Not a number');
 }
+
