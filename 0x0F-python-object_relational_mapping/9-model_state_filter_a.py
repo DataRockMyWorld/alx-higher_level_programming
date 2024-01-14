@@ -15,11 +15,11 @@ if __name__ == "__main__":
             sys.argv[1], sys.argv[2], sys.argv[3]
         )
     )
-    Base.metadata.create_all(engine)
+
     Session = sessionmaker(bind=engine)
 
     session = Session()
-    
+
     states = session.query(State).filter(State.name.contains('a'))
     if states is not None:
         for state in states:

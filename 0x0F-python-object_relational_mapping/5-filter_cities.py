@@ -4,7 +4,7 @@ This script takes an argument and displays states
 that match the argument
 """
 
-import MySQLdb 
+import MySQLdb
 from sys import argv
 
 if __name__ == "__main__":
@@ -27,4 +27,3 @@ if __name__ == "__main__":
 
     if query_rows is not None:
         print(", ".join([row[1] for row in query_rows]))
-
