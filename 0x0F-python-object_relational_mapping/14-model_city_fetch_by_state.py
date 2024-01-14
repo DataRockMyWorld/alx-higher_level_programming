@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-"""Start link class to table in database
+"""
+Prints all City objects from
+the database
 """
 import sys
 from model_state import Base, State
@@ -9,7 +11,7 @@ from sqlalchemy.orm import sessionmaker
 
 if __name__ == "__main__":
     """
-    Acess to database codesource
+    Acess to database for objects
     """
     engine = create_engine(
         "mysql+mysqldb://{}:{}@localhost/{}".format(

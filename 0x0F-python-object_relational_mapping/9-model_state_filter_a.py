@@ -19,6 +19,8 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
 
     session = Session()
-
-    for state in session.query(State).filter(State.name.contains('a')):
-        print("{}:{}".format(state.id, state.name))
+    
+    states = session.query(State).filter(State.name.contains('a'))
+    if states is not None:
+        for state in states:
+            print('{0}: {1}'.format(state.id, state.name))
