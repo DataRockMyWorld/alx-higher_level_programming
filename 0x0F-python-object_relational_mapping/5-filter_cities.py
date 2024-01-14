@@ -13,10 +13,10 @@ if __name__ == "__main__":
     )
     with db.cursor() as cur:
         cur.execute(
-            "SELECT cities.name FROM cities \
+            "SELECT cities.id, cities.name FROM cities\
                 JOIN states ON cities.state_id = states.id \
                     WHERE states.name \
-                        LIKE BINARY %(name)s ORDER BY cities.name ASC",
+                        LIKE BINARY %(name)s ORDER BY cities.id ASC",
             {'name': argv[4]},
         )
 
