@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" 
+"""
 This script takes an argument and displays states
 that match the argument
 """
@@ -15,14 +15,15 @@ if __name__ == "__main__":
         cur.execute(
             "SELECT cities.name FROM cities \
                 JOIN states ON cities.state_id = states.id \
-                    WHERE states.name LIKE BINARY %(name)s ORDER BY cities.name ASC",
+                    WHERE states.name \
+                        LIKE BINARY %(name)s ORDER BY cities.name ASC",
             {'name': argv[4]},
         )
 
         query_rows = cur.fetchall()
-    
+
     if query_rows is not None:
-       print(", ".join([row[0] for row in query_rows]))
+        print(", ".join([row[0] for row in query_rows]))
 
     cur.close()
     db.close()

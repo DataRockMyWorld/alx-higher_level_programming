@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" 
+"""
 This script takes an argument and displays states
 that match the argument
 """
