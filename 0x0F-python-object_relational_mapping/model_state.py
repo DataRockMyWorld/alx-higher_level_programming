@@ -1,4 +1,8 @@
 #!/usr/bin/python3
+"""
+This script defines a Base class to
+combine  Table, Mapper() and class object
+"""
 
 from sqlalchemy import Column, Integer, String
 from sqlalchemy.ext.declarative import declarative_base
