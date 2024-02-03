@@ -14,7 +14,7 @@ class State(Base):
     """
     Attributes:
     __tablename__ (str): The table name of the class
-    id (int): The State id of the class
+    id (int): The id of the state property
     name (str): The State name of the class
     """
 
